@@ -1,145 +1,17 @@
-
-<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta id="viewport" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=2,minimal-ui,user-scalable=no,viewport-fit=cover"><meta name="format-detection" content="telephone=no"><meta property="og:url" content="https://kbwallet.kbstar.com"><meta property="og:title" content="KB Wallet"><meta property="og:type" content="website"><meta property="og:description" content="KB Wallet 상세설명입니다."><meta property="og:image" content="https://kbwallet.kbstar.com/images/2022/img_sns.png"><link rel="icon" href="/favicon.ico"><style>@keyframes rotateOutUp {
-      0% { opacity: 1; bottom: -9px; }
-      50% { opacity: .9; bottom: 70px; }
-      100% { opacity: 0; bottom: 70px; }
-    }
-    @keyframes rotateOutUpLeft {
-      0% { opacity: 1; transform-origin: left bottom; bottom:-9px; }
-      50% { opacity: .9; transform-origin: left bottom; bottom:70px; left: 50px; }
-      100% { opacity: 0; transform-origin: left bottom; bottom: 70px; left: 50px; }
-    }
-    @keyframes rotateOutUpRight {
-      0% { opacity: 1; transform-origin: right bottom; bottom: -9px; }
-      50% { opacity: .9; transform-origin: right bottom; bottom: 70px; right: 15px; }
-      100% { opacity: 0; transform-origin: right bottom; bottom: 70px; right: 15px; }
-    }
-    @keyframes star0 {
-      100% { transform: rotate(360deg); }
-    }
-    #SPA-App *,
-    #SPA-App *::before,
-    #SPA-App *::after { padding: 0; margin: 0; }
-    #SPA-App .loadingindex {
-      position: absolute;
-      left: 50%; top: 50%;
-      transform: translate(-50%, -50%);
-      margin-top: -60px;
-    }
-    #SPA-App .loadingindex div { background-repeat: no-repeat; background-size: 100% auto; }
-    #SPA-App .loadingindex .animation_m {
-      position: relative; overflow: hidden;
-      width: 200px; height: 168px; margin: 0 auto;
-    }
-    #SPA-App .loadingindex .icon_group {
-      width: 85px; height: 168px;
-      position: absolute; transform: translate(-50%, 0);
-      bottom: -1px; overflow: hidden; left: 50%;
-    }			
-    #SPA-App .loadingindex .icon_group .loading_1{
-      width: 50px; height: 72px;
-      background-image: url("images/loading/icon_1.svg");
-      animation: rotateOutUpLeft 1.2s cubic-bezier(0.29, 0.02, 0, 0.9) infinite;
-      z-index: 5; position: absolute;
-      transform: translate(-50%, 0); bottom: -9px; left: 43%;
-    }
-    #SPA-App .loadingindex .icon_group .loading_2{
-      width:50px; height: 72px;
-      background-image: url("images/loading/icon_2.svg");
-      animation: rotateOutUpRight 1.2s .3s cubic-bezier(0.29, 0.02, 0, 0.9) infinite;
-      z-index: 4; position: absolute; transform: translate(-37%, 0);
-      bottom: -9px; right: 0;
-    }
-    #SPA-App .loadingindex .icon_group .loading_3 {
-      width: 50px; height: 72px;
-      background-image: url("images/loading/icon_3.svg");
-      animation: rotateOutUp 1.2s .7s cubic-bezier(0.29, 0.02, 0, 0.9) infinite;
-      z-index: 3; position: absolute; transform: translate(27%, 0);
-      bottom: -9px; left: 0%;
-    }
-    #SPA-App .loadingindex .star_group {
-      position: absolute; width: 85%; bottom: 77px; left: 50%;
-      transform: translate(-50%, 0); margin: 0 auto;
-    }
-    #SPA-App .loadingindex .star_group .star_1 {
-      width: 38.55px; height: 38.55px;
-      background-image: url("images/loading/star_1.svg");
-      animation: star0 6s linear infinite;
-      transform-origin: 50% 50%;
-    }
-    #SPA-App .loadingindex .star_group .star_2 {
-      width: 20px; height: 20px; left: 0;
-      background-image: url("images/loading/star_2.svg");
-      animation: star0 6s linear infinite;
-      transform-origin: 50% 50%;
-      margin-left: -17px; transition-delay: 2s;
-    }
-    #SPA-App .loadingindex .star_group .star_3 {
-      width: 20px; height: 20px;
-      background-image: url("images/loading/star_3.svg");
-      animation: star0 6s linear infinite;
-      transform-origin: 50% 50%;
-      float: right; margin-top: -20px;
-      transition-delay: 4s;
-    }
-    #SPA-App .loadingindex .bg_f {
-      width: 85px; height: 57px;
-      background-image: url("images/loading/bg_f.svg");
-      z-index: 9; position: absolute;
-      transform: translate(-50%, 0); bottom: 0; left: 50%;
-    }
-    #SPA-App .loadingindex .bg_b {
-      width: 85px; height: 18px;
-      background-image: url("images/loading/bg_b.svg");
-      position: absolute; transform: translate(-50%, 0);
-      top: 103px; left: 50%; z-index: 1;
-    }
-    #SPA-App .loadingindex_text{
-      width:205px; height:22px;
-      margin: 30px auto 0;
-      background-image: url("images/loading/text.png");
-    }</style><title>KB Wallet</title><script>var tempToday = new Date();
-      var dummy = '?dummy=' + tempToday.getTime();
-      var NODE_ENV = 'production';
-      if(NODE_ENV !== 'production') {
-        /* 개발/스테이징 서버 */
-        document.write('<script src="https://zmnbank.kbstar.com/mnbank/test/extend_platform.js'+dummy+'"><\/'+'script>'); /* 확장형플랫폼 */
-        document.write('<script src="https://zmbank.kbstar.com/omweb/js/liivtalk/liivtalk-link.js" defer><\/'+'script>'); /* 리브똑똑 */
-      } else {
-        /* 운영 서버 */
-        document.write('<script src="https://oimg1.kbstar.com/js/common/extendPlatform/extend_platform.js'+dummy+'"><\/'+'script>'); /* 확장형플랫폼 */
-        document.write('<script src="https://mbank.kbstar.com/omweb/js/liivtalk/liivtalk-link.js" defer><\/'+'script>'); /* 리브똑똑 */
-      }
-
-      /* extend_platform loading 문제 있을 경우 처리 */
-      window.COMMON = {};
-      window.COMMON.isNative = function () {
-        return navigator.userAgent.toLowerCase().indexOf('kbstarbank') > -1
-      }
-      /**
-       * Device의 OS 타입 조회
-       * @returns {String} android ,IOS - ios else
-      */
-      window.COMMON.getUserAgent = function () {
-        var device = navigator.userAgent.toLowerCase();
-        var return_value;
-        if (/android/.test(device)) {
-          return_value = "android";
-        } else if (/ipad|ipod|iphone|mac/.test(device)) {
-          return_value = "ios";
-        } else {
-          return_value = "else";
-        }
-        return return_value;
-      };
-
-      /* 모바일 웹 페이지 숏컷 관련 */
-      if(window.COMMON.getUserAgent() === 'ios') {
-        document.write(`<link rel="apple-touch-icon" href="/images/2022/kbwallet_appicon_02_128.png">`);
-      } else {
-        document.write(`<link rel="shortcut icon" href="/images/2022/kbwallet_appicon_128x128.png">`);
-      }</script><script src="https://developers.kakao.com/sdk/js/kakao.min.js" defer></script><script>window.addEventListener('DOMContentLoaded', () => {
-          if (typeof (window.Kakao) !== 'undefined') {
-            Kakao.init('9ad854996befdc9488496f3a28803ea5');
-          }
-        })</script><script src="/js/moment.min.js" defer></script><script src="/js/pikaday.min.js" defer></script><script>(function (f, d, k, h) { var b; var a = m() + "ver=" + c(d); g(); function e() { var o = document.getElementsByTagName(f)[0]; var n = document.createElement(f); n.async = true; n.charset = "utf-8"; n.src = a; o.parentNode.insertBefore(n, o) } function m() { var y = ''; var z = window.COMMON.isNative() ? "30304" : "75990"; return "https://" + y + "log-kbwallet.kbstar.com/static/" + z + "/install.js?" } function c(n) { var o = new Date().getTime(); var p = n * 1000 * 60; return n > 0 ? Math.floor(o / p) * p : o } function g() { var n = l(); if (!n) { return false } n.open("GET", a, true); n.withCredentials = h; n.send(null); n.onload = function () { j(); e() }; n.onerror = n.onabort = function () { j() }; i(function () { n.abort() }, k) } function l() { var q; var o = [function () { return new XDomainRequest() }, function () { return new XMLHttpRequest() }, function () { return new ActiveXObject("Msxml2.XMLHTTP") }, function () { return new ActiveXObject("Msxml3.XMLHTTP") }, function () { return new ActiveXObject("Microsoft.XMLHTTP") }]; for (var n = 0; n < o.length; n++) { try { q = o[n]() } catch (p) { continue } break } return q } function i(o, n) { b = setTimeout(o, n) } function j() { if (b) { clearTimeout(b); b = null } } })("script", 10,/*{{timeout}}*/1000,/*{{withCredentials}}*/false);</script><script>if (!window.COMMON.isNative()) document.querySelector('html').classList.add('mw-mode');</script><link href="/css/app.26ee7100.css" rel="preload" as="style"><link href="/css/chunk-vendors.dc38e1f8.css" rel="preload" as="style"><link href="/js/app.c057ca82.js" rel="preload" as="script"><link href="/js/chunk-vendors.c057ca82.js" rel="preload" as="script"><link href="/css/chunk-vendors.dc38e1f8.css" rel="stylesheet"><link href="/css/app.26ee7100.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but spa_boilerplate_vuetify doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="SPA-App"><div class="loadingindex"><div class="animation_m"><div class="bg_f"></div><div class="star_group"><div class="star_1"></div><div class="star_2"></div><div class="star_3"></div></div><div class="icon_group"><div class="loading_1"></div><div class="loading_2"></div><div class="loading_3"></div><div class="bg_b"></div></div></div><div class="loadingindex_text"></div></div></div><script src="/js/chunk-vendors.c057ca82.js"></script><script src="/js/app.c057ca82.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=2,minimal-ui,user-scalable=no,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:url" content="https://kbwallet.kbstar.com">
+<meta property="og:title" content="KB Wallet">
+<meta property="og:type" content="website">
+<meta property="og:description" content="KB Wallet 상세설명입니다.">
+<meta property="og:image" content="https://kbwallet.kbstar.com/images/2022/img_sns.png">
+<link rel="icon" href="/favicon.ico">
+</head>
+<body>
+  hi
+</body>
+</html>
